@@ -1,0 +1,4 @@
+﻿Scaffold-DbContext "Data Source=.;Initial Catalog=BookStore;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+
+add-migration <name> -Context BookStoreContext
+update-database -Context BookStoreContext

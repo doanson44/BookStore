@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[TodoItem]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY, 
+    [Item] NVARCHAR(50) NOT NULL, 
+    [Minutes] BIGINT NOT NULL,
+)

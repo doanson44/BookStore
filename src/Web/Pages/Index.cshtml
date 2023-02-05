@@ -1,0 +1,50 @@
+﻿@page
+@{
+    ViewData["Title"] = "Book";
+    @model IndexModel
+
+}
+
+<section class="esh-catalog-filters">
+    <div class="container">
+        <form method="get">
+            <label class="esh-catalog-label" data-title="brand">
+                <select asp-for="@Model.BookModel.CategoryFilterApplied" asp-items="@Model.BookModel.Categories" class="esh-catalog-filter"></select>
+            </label>
+            <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
+        </form>
+    </div>
+</section>
+<div class="container">
+
+
+    @if (Model.BookModel.BookItems.Any())
+    {
+        <div class="esh-book-items row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Book Title</th>
+                        <th scope="col">Book Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bookItem in Model.BookModel.BookItems)
+                    {
+                        <tr>
+                            <partial name="_book" for="@bookItem" />
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <partial name="_pagination" for="BookModel.PaginationInfo" />
+    }
+    else
+    {
+        <div class="esh-book-items row">
+            THERE ARE NO RESULTS THAT MATCH YOUR SEARCH
+        </div>
+    }
+</div>

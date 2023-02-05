@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=.;Initial Catalog=TodoListDb;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data

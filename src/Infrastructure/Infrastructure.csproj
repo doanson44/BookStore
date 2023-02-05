@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>		
+		<RootNamespace>Microsoft.BookStore.Infrastructure</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
+		<ProjectReference Include="..\BookStoreData\BookStoreData.csproj" />
+		<ProjectReference Include="..\Commons\Commons.csproj" />
+		<ProjectReference Include="..\ToDoData\ToDoData.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Interfaces\" />
+	</ItemGroup>
+</Project>

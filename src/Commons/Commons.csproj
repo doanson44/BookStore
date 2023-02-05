@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>  
+    <RootNamespace>Commons</RootNamespace>
+    <AssemblyName>Commons</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorInputFile" />
+    <PackageReference Include="FluentValidation" />
+  </ItemGroup>
+
+</Project>
